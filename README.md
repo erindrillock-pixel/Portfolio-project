@@ -27,31 +27,25 @@ https://doi.org/10.24432/C51W2X. See [`data/README.md`](data/README.md).
 ├── requirements.txt
 ├── ASSISTANCE_DECLARATION.md
 ├── data/
-│   └── README.md            # source, licence, download instructions (CSV is downloaded, not committed)
+│   └── README.md            
 ├── notebooks/
 │   └── 01_data_audit_and_baseline.ipynb
 ├── src/
-│   └── data.py              # downloads and loads the dataset
+│   └── data.py              
 └── reports/
     ├── baseline_cv_results.csv
-    └── figures/             # figures saved by the notebook
+    └── figures/             
 ```
 
 ## Setup
 
-Tested with **Python 3.14** on macOS. Python 3.11 or newer is recommended. An internet connection is needed on
-the first run to download the data from UCI.
+Tested with **Python 3.14** on macOS.
 
 ```bash
 git clone https://github.com/erindrillock-pixel/Portfolio-project.git
 cd Portfolio-project
-
 python -m venv .venv
-# macOS/Linux:
 source .venv/bin/activate
-# Windows:
-.venv\Scripts\activate
-
 pip install -r requirements.txt
 ```
 
