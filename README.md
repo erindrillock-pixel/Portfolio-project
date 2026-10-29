@@ -1,6 +1,6 @@
 # Detecting Phishing Websites from URL and Page Features
 
-CT4101 Machine Learning Portfolio Project, University of Galway. Erin Drillock, Student ID: [ID]
+CT4101 Machine Learning Portfolio Project, University of Galway. Erin Drillock, Student ID: 26100644
 
 **Question:** Given features describing a website's URL, domain and page behaviour, can a model reliably classify
 the site as *phishing* or *legitimate*, without missing many phishing sites?
