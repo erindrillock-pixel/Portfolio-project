@@ -1,0 +1,5 @@
+model,threshold,recall,precision,f1,roc_auc,accuracy,missed_phishing,false_alarms
+Majority class (baseline),0.5,1.0,0.516,0.681,0.5,0.516,0,566
+Logistic regression,0.5,0.927,0.946,0.936,0.986,0.935,44,32
+Random forest,0.5,0.932,0.962,0.947,0.991,0.946,41,22
+Random forest (threshold 0.34),0.34,0.97,0.93,0.95,0.991,0.947,18,44
