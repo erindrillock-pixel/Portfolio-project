@@ -31,3 +31,26 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/data_baseline.ipyn
 jupyter nbconvert --to notebook --execute --inplace notebooks/model_comparison.ipynb
 ```
 Or open them with `jupyter lab` and choose **Kernel → Restart Kernel and Run All Cells**.
+
+# Data
+
+**Dataset:** Phishing Websites, UCI Machine Learning Repository, dataset id 327
+**Page:** https://archive.ics.uci.edu/dataset/327/phishing+websites
+**Licence:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+**Citation:** Mohammad, R. & McCluskey, L. (2012). *Phishing Websites* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C51W2X
+
+## How to obtain it
+
+Nothing needs to be downloaded by hand. The first notebook (`data_baseline.ipynb`) calls `load_dataset()` in `src/data.py`, which:
+
+1. downloads the official zip from UCI (`https://archive.ics.uci.edu/static/public/327/phishing+websites.zip`);
+2. reads `Training Dataset.arff` inside it (11,055 rows, 30 features + `Result`);
+3. renames the columns to snake_case and saves `data/phishing_websites.csv`.
+
+To download it on its own, from the project root: `python -m src.data`
+
+The CSV is not committed (see `.gitignore`) because it can be re-downloaded exactly; the CC BY 4.0 licence would allow it to be included with attribution.
+
+## Coding
+
+Every feature is coded by the dataset authors' rules as -1 (phishing-like), 0 (suspicious) or 1 (legitimate-like). Target `result`: -1 = phishing, 1 = legitimate. The notebooks recode it as `is_phishing` (1 = phishing).
