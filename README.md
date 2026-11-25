@@ -32,14 +32,7 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/model_comparison.i
 ```
 Or open them with `jupyter lab` and choose **Kernel → Restart Kernel and Run All Cells**.
 
-# Data
-
-**Dataset:** Phishing Websites, UCI Machine Learning Repository, dataset id 327
-**Page:** https://archive.ics.uci.edu/dataset/327/phishing+websites
-**Licence:** Creative Commons Attribution 4.0 International (CC BY 4.0)
-**Citation:** Mohammad, R. & McCluskey, L. (2012). *Phishing Websites* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C51W2X
-
-## How to obtain it
+## How to obtain Data
 
 Nothing needs to be downloaded by hand. The first notebook (`data_baseline.ipynb`) calls `load_dataset()` in `src/data.py`, which:
 
